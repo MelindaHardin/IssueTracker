@@ -52,7 +52,6 @@ class IssueRow extends Component {
     const issue = this.props.issue;
 
     return (
-      <div className="">
       <tr>
         <td>{issue.id}</td>
         <td>{issue.status}</td>
@@ -62,7 +61,6 @@ class IssueRow extends Component {
         <td>{issue.completionDate ? issue.completionDate.toDateString() : ""}</td> 
         <td>{issue.title}</td>
       </tr>
-      </div>
     );
   }
 } 
@@ -75,9 +73,9 @@ class IssueTable extends Component {
     const issueRows = this.props.issues.map(issue => <IssueRow key={issue.id} issue= {issue} />)
 
     return (
-      <div>
         <table className="bordered-table">
-          <thead>
+        <thead>
+          <tr>
             <th>ID</th>
             <th>Status</th>
             <th>Owner</th>
@@ -85,12 +83,12 @@ class IssueTable extends Component {
             <th>Effort</th>
             <th>Completion Date</th>
             <th>Title</th>
-          </thead>
+          </tr>
+        </thead>
         <tbody>
           {issueRows}
         </tbody>
       </table>
-      </div>
     );
   }
 } 
@@ -102,7 +100,6 @@ class IssueList extends Component {
 
     return (
       <div>
-     
       <h1>Issue Tracker</h1>
         <IssueFilter />
         <IssueTable issues = {issues} />
