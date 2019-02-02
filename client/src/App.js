@@ -7,7 +7,7 @@ const issues = [
   { id: "1",
     status: "Open",
     owner: "Ravan",
-    created: new Date ('2016-8-15'),
+    created: new Date ('2016-08-15'),
     effort: 5,
     completionDate: undefined,
     title: "Eror in console when clicking add"
@@ -16,11 +16,20 @@ const issues = [
   { id: "2",
   status: "Assigned",
   owner: "Eddie",
-  created: new Date ('2016-8-16'),
+  created: new Date ('2016-08-16'),
   effort: 14,
   completionDate: new Date ("2016-08-30"),
   title: "Missing bottom border on panel"
   },
+
+  { id: "3",
+  status: "Assigned",
+  owner: "Ellie",
+  created: new Date ('2018-09-22'),
+  effort: 19,
+  completionDate: new Date ("2018-10-30"),
+  title: "Test"
+  }
 ];
 
 class IssueFilter extends Component {
